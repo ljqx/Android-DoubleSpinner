@@ -3,16 +3,20 @@
 
 A cascaded double spinner view in Android.
 
-Default:
+Default
+
 ![Screenshot](https://raw.githubusercontent.com/ljqx/Android-DoubleSpinner/master/screenshot/1-default.jpg)
 
-Clicked:
+Clicked
+
 ![Screenshot](https://raw.githubusercontent.com/ljqx/Android-DoubleSpinner/master/screenshot/2-clicked.jpg)
 
-Chosen:
+Chosen
+
 ![Screenshot](https://raw.githubusercontent.com/ljqx/Android-DoubleSpinner/master/screenshot/3-chosen.jpg)
 
-After Chosen:
+After Chosen
+
 ![Screenshot](https://raw.githubusercontent.com/ljqx/Android-DoubleSpinner/master/screenshot/4-after-chosen.jpg)
 
 ## Usage
