@@ -1,5 +1,4 @@
 # Android-DoubleSpinner
-=====================
 
 A cascaded double spinner view in Android.
 
@@ -20,11 +19,9 @@ After Chosen
 ![Screenshot](https://raw.githubusercontent.com/ljqx/Android-DoubleSpinner/master/screenshot/4-after-chosen.jpg)
 
 ## Usage
-=====================
 
 Check demo.
 
 ## ChangeLog
-=====================
 
 None.
