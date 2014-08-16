@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/DoubleSpinner.iml" filepath="$PROJECT_DIR$/DoubleSpinner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/double-spinner/double-spinner.iml" filepath="$PROJECT_DIR$/double-spinner/double-spinner.iml" />
+    </modules>
+  </component>
+</project>
+
