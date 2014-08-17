@@ -16,10 +16,11 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 
 public class DoubleSpinner extends Button {
-    Context context;
-    DoubleListView doubleListView;
-    PopupWindow popup;
-    OnSelectedListener onSelectedListener = null;
+    private Context context;
+    private DoubleListView doubleListView;
+    private PopupWindow popup;
+    private OnSecondarySelectedListener onSecondarySelectedListener = null;
+
     public DoubleSpinner(Context context) {
         super(context);
         init(context);
@@ -43,10 +44,17 @@ public class DoubleSpinner extends Button {
         popup.setTouchable(true);
         popup.setOutsideTouchable(true);
         popup.setBackgroundDrawable(new BitmapDrawable(getResources(), (Bitmap) null));
+        popup.setOnDismissListener(new PopupWindow.OnDismissListener() {
+            @Override
+            public void onDismiss() {
+                setSelected(false);
+            }
+        });
         setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 popup.showAsDropDown(v);
+                setSelected(true);
             }
         });
     }
@@ -55,12 +63,12 @@ public class DoubleSpinner extends Button {
         doubleListView.setAdapter(adapter);
     }
 
-    public void setOnSelectedListener(OnSelectedListener listener) {
-        this.onSelectedListener = listener;
+    public void setOnSecondarySelectedListener(OnSecondarySelectedListener listener) {
+        this.onSecondarySelectedListener = listener;
     }
 
-    public static interface OnSelectedListener {
-        abstract void onSelected(View parent, int primarySelected, long primaryId, int secondarySelected, long secondaryId);
+    public static interface OnSecondarySelectedListener {
+        abstract void onSecondarySelected(View parent, int primarySelected, long primaryId, int secondarySelected, long secondaryId);
     }
 
     private class DoubleListView extends FrameLayout  implements AdapterView.OnItemClickListener {
@@ -116,8 +124,8 @@ public class DoubleSpinner extends Button {
                 DoubleSpinner.this.setText(((TextView) view).getText().toString());
                 int primarySelected = adapter.getPrimarySelected();
                 long primarySelectedId = adapter.getPrimaryAdapter().getItemId(primarySelected);
-                if (onSelectedListener != null) {
-                    onSelectedListener.onSelected(DoubleSpinner.this, primarySelected, primarySelectedId, position, id);
+                if (onSecondarySelectedListener != null) {
+                    onSecondarySelectedListener.onSecondarySelected(DoubleSpinner.this, primarySelected, primarySelectedId, position, id);
                 }
             }
         }

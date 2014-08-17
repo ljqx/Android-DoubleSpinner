@@ -18,6 +18,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="@string/foo"
+            android:background="@drawable/double_spinner_bg_selector"
             style="?android:attr/buttonBarButtonStyle" />
         <gait.remi.android.view.DoubleSpinner
             android:id="@+id/bar"
@@ -25,6 +26,12 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="@string/bar"
+            style="?android:attr/buttonBarButtonStyle" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/foobar"
             style="?android:attr/buttonBarButtonStyle" />
         </LinearLayout>
 
