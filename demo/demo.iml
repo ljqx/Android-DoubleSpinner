@@ -79,7 +79,7 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 19 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="double-spinner" exported="" />
+    <orderEntry type="library" exported="" name="double-spinner-0.0.3" level="project" />
   </component>
 </module>
 
